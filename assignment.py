@@ -20,6 +20,8 @@ def remove_vowels(text):
     for i in range(len(text)):
         if text[i] not in "aoueiAOUIE":
             word+=text[i]
+    if len(word)==0:
+        print('')
     print(word)
     pass
 
@@ -31,9 +33,10 @@ def get_initials(text):
     a+="."
     a+=text1[1][0].upper()
     a+="."
+    a+=text1[2][0].upper()
+    a+="."
     print(a)
     pass
-
 # Exercise 4
 def extract_year(text):
     a=""
@@ -50,7 +53,7 @@ def extract_year(text):
 def is_palindrome(text):
     text1=""
     for i in text:
-        if i!=" ":
+        if i not in " ?!;:.,'":
             text1+=i
     if text1.lower()==text1[::-1].lower():
         print(True)
