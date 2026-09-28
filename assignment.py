@@ -29,12 +29,8 @@ def remove_vowels(text):
 def get_initials(text):
     a=""
     text1=text.split()
-    a+=text1[0][0].upper()
-    a+="."
-    a+=text1[1][0].upper()
-    a+="."
-    a+=text1[2][0].upper()
-    a+="."
+    for i in range(len(text1)):
+        a=a+text1[i][0].upper()+"."
     print(a)
     pass
 # Exercise 4
