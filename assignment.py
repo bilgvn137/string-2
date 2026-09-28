@@ -9,9 +9,9 @@ def is_valid_email(text):
         elif  i==".":
             count+=1
     if count>=2:
-        print ("Valid")
+        return "Valid"
     else:
-        print("Invalid")
+        return "Invalid"
     pass
 
 # Exercise 2
@@ -21,8 +21,8 @@ def remove_vowels(text):
         if text[i] not in "aoueiAOUIE":
             word+=text[i]
     if len(word)==0:
-        print('')
-    print(word)
+        return ''
+    return word
     pass
 
 # Exercise 3
@@ -31,7 +31,7 @@ def get_initials(text):
     text1=text.split()
     for i in range(len(text1)):
         a=a+text1[i][0].upper()+"."
-    print(a)
+    return a
     pass
 # Exercise 4
 def extract_year(text):
@@ -40,9 +40,9 @@ def extract_year(text):
         if text[i] in "0123456789":
             a+=text[i]
     if len(a)<5 and len(a)>0:
-        print(a)
+        return a
     else:
-        print("False")
+        return False
     pass
 
 # Exercise 5
@@ -52,8 +52,8 @@ def is_palindrome(text):
         if i not in " ?!;:.,'":
             text1+=i
     if text1.lower()==text1[::-1].lower():
-        print(True)
+        return True
     else:
-        print(False)
+        return False
     pass
 
